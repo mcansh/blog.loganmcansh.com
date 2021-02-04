@@ -1,8 +1,10 @@
-import { homepage } from '~/package.json';
+import pkgJSON from '~/package.json';
 
 function getDeploymentURL(path?: string) {
   const prefix =
-    process.env.ENV === 'production' ? homepage : process.env.VERCEL_URL;
+    process.env.ENV === 'production'
+      ? pkgJSON.homepage
+      : process.env.VERCEL_URL;
   const leadingSlash = path
     ? path.startsWith('/')
       ? path

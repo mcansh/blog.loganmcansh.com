@@ -18,6 +18,7 @@ const router: NextRouter = {
   replace: jest.fn(),
   route: '/',
   basePath: '',
+  isReady: true,
 };
 
 export function useRouter() {

@@ -42,7 +42,7 @@ async function getPosts() {
 export interface RenderToStringOutput {
   compiledSource: string;
   renderedOutput: string;
-  scope: { [key: string]: any };
+  scope: { [key: string]: unknown };
 }
 
 function renderPostToString(
